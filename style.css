@@ -1,0 +1,130 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: radial-gradient(circle at top right, #1b3a8a, #05070f 60%);
+}
+
+.sidebar {
+  width: 80px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+}
+h2 { margin: 6px 0; }
+h3 { margin-bottom: 10px; font-size: 16px; opacity: 0.9; }
+p, label { font-size: 14px; opacity: 0.85; line-height: 1.8; }
+
+/* Weekly bars */
+.bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100px;
+}
+.bar {
+  width: 12px;
+  border-radius: 8px;
+  background: linear-gradient(to top, #2a5bff, #6fa8ff);
+}
+.bar:nth-child(1) { height: 40%; }
+.bar:nth-child(2) { height: 35%; }
+.bar:nth-child(3) { height: 38%; }
+.bar:nth-child(4) { height: 45%; }
+.bar:nth-child(5) { height: 70%; }
+.bar:nth-child(6) { height: 95%; }
+.bar:nth-child(7) { height: 50%; }
+
+/* Timer button */
+#startBtn {
+  margin-top: 10px;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.12);
+  color: white;
+  cursor: pointer;
+}
+#startBtn:hover { background: rgba(255,255,255,0.2); }
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.sidebar ul { list-style: none; }
+
+.sidebar li { margin-bottom: 14px; }
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.sidebar a:hover { opacity: 1; }
+
+.grid {
+  flex: 1;
+  min-width: 0;
+}
+#productivity { position: relative; }
+
+.ring {
+  --p: 78;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: conic-gradient(#4f8cff calc(var(--p) * 1%), rgba(255,255,255,0.1) 0);
+}
+
+/* hollow centre */
+.ring::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  background: #0b1030;
+}
+.presets { display: flex; gap: 8px; margin-top: 10px; }
+
+.presets button {
+  padding: 6px 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 14px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.presets button:hover,
+.presets button.active { background: rgba(79,140,255,0.4); }

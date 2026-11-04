@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Tasks</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Notes</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="grid">
+        <section class="card" id="greeting">
+        <p id="greet-text">Good Evening,</p>
+        <h2>Addo Dankwah</h2>
+            <span id="clock">8:00pm</span>
+        </section>
+        <section class="card" id="weather">
+            <p id="date">Date</p>
+            <h2 id="temp">27°</h2>
+            <p>Cloudy</p>
+        </section>
+        <section class="card" id="productivity">
+            <h3>Productivity</h3>
+            <div class="ring" id="ring"></div>
+            <h2 id="percent">78%</h2>
+            <p>Task Completed: <span id="done">14</span></p>
+            <p>Total Tasks: <span id="total">18</span></p>
+        </section>
+        <section class="card" id="timer">
+    <h3>Focus Timer</h3>
+    <h2 id="time"><div class="presets">
+  <button data-min="5">5</button>
+  <button data-min="10">10</button>
+  <button data-min="25">25</button>
+  <button data-min="50">50</button>
+</div>
+</h2>
+    <button id="startBtn">Start</button>
+  </section>
+
+  <section class="card" id="tasks">
+    <h3>Tasks</h3>
+    <label><input type="checkbox" checked> UI/UX Research</label><br>
+    <label><input type="checkbox" checked> Design Dashboard</label><br>
+    <label><input type="checkbox"> Prototype App</label><br>
+    <label><input type="checkbox"> User Testing</label>
+  </section>
+
+  <section class="card" id="mood">
+    <h3>Current Mood</h3>
+    <p>Focused</p>
+    <p>Distractions: Low</p>
+  </section>
+
+  <section class="card" id="weekly">
+    <h3>Weekly Activity</h3>
+    <div class="bars">
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </section>
+
+  <section class="card" id="shortcuts">
+    <h3>Shortcuts</h3>
+    <p>Notes · Files · Music · Calendar · Camera · Slack</p>
+  </section>
+
+  <section class="card" id="events">
+    <h3>Upcoming Events</h3>
+    <p>25 MAY, Project Meeting</p>
+    <p>26 MAY, Design Review</p>
+    <p>28 MAY, Client Call</p>
+  </section>
+
+  <section class="card" id="system">
+    <h3>System Status</h3>
+    <p>Storage 78%</p>
+    <p>Battery 82%</p>
+    <p>Network 94%</p>
+  </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
